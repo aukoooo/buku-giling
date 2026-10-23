@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Buku Giling</title>
+<meta name="theme-color" content="#1F6F54">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<div class="wrap">
+  <header>
+    <h1>Buku Giling</h1>
+    <span class="top"><span class="sync" id="sync">Memuat…</span><button class="btn line" id="b-out" style="padding:4px 10px">Keluar</button></span>
+  </header>
+  <section class="kas" aria-label="Kas">
+    <div><small>Kas</small><b id="k-kas">–</b></div>
+    <div><small>Utang</small><b id="k-utang">–</b></div>
+    <div><small>Kas bersih</small><b id="k-bersih">–</b></div>
+  </section>
+  <nav role="tablist" id="tabs">
+    <button role="tab" data-t="ringkasan" aria-selected="true">Ringkasan</button>
+    <button role="tab" data-t="pembelian" aria-selected="false">Pembelian</button>
+    <button role="tab" data-t="penjualan" aria-selected="false">Penjualan</button>
+    <button role="tab" data-t="stok" aria-selected="false">Stok</button>
+    <button role="tab" data-t="gaji" aria-selected="false">Gaji</button>
+  </nav>
+  <main id="view"></main>
+</div>
+<script src="config.js"></script>
+<script src="app.js"></script>
+<script>if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(function(){});</script>
+</body></html>
